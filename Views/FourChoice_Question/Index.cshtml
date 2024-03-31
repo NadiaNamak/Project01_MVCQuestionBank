@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Project01_MVCQuestionBank.Models.FourChoice_Question>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SemesterTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChapterTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SectionTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice01Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice02Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice03Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice04Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CorrectChoiceIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SemesterTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChapterTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SectionTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Choice01Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Choice02Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Choice03Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Choice04Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CorrectChoiceIndex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceTitle)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

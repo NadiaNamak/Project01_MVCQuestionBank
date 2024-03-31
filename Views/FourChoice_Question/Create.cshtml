@@ -1,0 +1,83 @@
+﻿@model Project01_MVCQuestionBank.Models.FourChoice_Question
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>FourChoice_Question</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SemesterTitle" class="control-label"></label>
+                <input asp-for="SemesterTitle" class="form-control" />
+                <span asp-validation-for="SemesterTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChapterTitle" class="control-label"></label>
+                <input asp-for="ChapterTitle" class="form-control" />
+                <span asp-validation-for="ChapterTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SectionTitle" class="control-label"></label>
+                <input asp-for="SectionTitle" class="form-control" />
+                <span asp-validation-for="SectionTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubjectTitle" class="control-label"></label>
+                <input asp-for="SubjectTitle" class="form-control" />
+                <span asp-validation-for="SubjectTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuestionTitle" class="control-label"></label>
+                <input asp-for="QuestionTitle" class="form-control" />
+                <span asp-validation-for="QuestionTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice01Title" class="control-label"></label>
+                <input asp-for="Choice01Title" class="form-control" />
+                <span asp-validation-for="Choice01Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice02Title" class="control-label"></label>
+                <input asp-for="Choice02Title" class="form-control" />
+                <span asp-validation-for="Choice02Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice03Title" class="control-label"></label>
+                <input asp-for="Choice03Title" class="form-control" />
+                <span asp-validation-for="Choice03Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice04Title" class="control-label"></label>
+                <input asp-for="Choice04Title" class="form-control" />
+                <span asp-validation-for="Choice04Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CorrectChoiceIndex" class="control-label"></label>
+                <input asp-for="CorrectChoiceIndex" class="form-control" />
+                <span asp-validation-for="CorrectChoiceIndex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReferenceTitle" class="control-label"></label>
+                <input asp-for="ReferenceTitle" class="form-control" />
+                <span asp-validation-for="ReferenceTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
